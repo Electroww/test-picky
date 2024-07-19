@@ -1,8 +1,9 @@
+import Post from '@/components/post/post';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
-      test
+      <Post />
     </main>
   );
 }
