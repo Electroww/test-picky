@@ -4,11 +4,11 @@ import { Badge } from '../ui/badge';
 export default function PostHeader() {
   // const test = "test"
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-2.5">
       <div className="h-9 w-9 bg-black rounded-full overflow-hidden">
         <Image src="/images/picky.webp" width={500} height={500} alt="Picture of the author" />
       </div>
-      <div className="flex flex-col justify-center font-kumbh">
+      <div className="flex flex-col justify-center font-sans">
         <div className="flex items-center gap-2">
           <div className="font-bold leading-4">Picky</div>
           <div>

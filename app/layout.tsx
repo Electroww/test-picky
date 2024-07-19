@@ -1,5 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { Onest } from 'next/font/google';
+
+const onest = Onest({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-onest'
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -12,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${onest.variable}`}>
       <body>
         <div className="mx-auto max-w-[56rem]">{children}</div>
       </body>

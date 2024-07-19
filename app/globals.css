@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -66,9 +64,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-kumbh;
+    @apply bg-background font-sans;
   }
   h1 {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold font-sans;
   }
 }
