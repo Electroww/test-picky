@@ -1,28 +1,36 @@
-# Frontend Assignment: Discussion Page
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Assessment Instructions
+## Getting Started
 
-### Overview
+First, run the development server:
 
-Your task is to create a discussion page using either React.js or Next.js. This page will display discussion content using provided JSON data. The design and features are up to your creativity but should ensure a good user experience across different devices.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### Instructions
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. Use React.js or Next.js to build the discussion page, you are free to design the page however you want.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-2. Use the JSON data provided in the folders to populate the page with discussion content.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-3. Interface images are supplied locally. Make sure to integrate them into your design.
+## Learn More
 
-4. Discussion content images are given as URLs within the data. Ensure these images are displayed correctly.
+To learn more about Next.js, take a look at the following resources:
 
-5. The page must be responsive and provide a good user experience on Desktop, Tablet, and Mobile devices.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-6. Give us instructions for how to run your app.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-### Additional Guidelines
+## Deploy on Vercel
 
-- Add as many features as you want. Be creative and try to make the page engaging and functional.
-- You can draw inspiration from the [Picky discussion page](https://www.gopicky.com/discussion/95315/mega-giveaway-alert-high-chance-of-winning-apply-now) or the Picky app discussion page.
-- Feel free to use any design library to enhance your UI/UX.
-- Implementing the page using Next.js with Server-Side Rendering (SSR) can earn you bonus points.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
