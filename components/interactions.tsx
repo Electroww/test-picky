@@ -28,7 +28,9 @@ export default function Interactions({
               width={iconSize}
               height={iconSize}
             />
-            <span className={`${textSize}`}>{upvoteCount}</span>
+            <span data-testid="upvote-count" className={`${textSize}`}>
+              {upvoteCount}
+            </span>
           </div>
           <div className="flex gap-2 items-center cursor-pointer transition-all duration-300 hover:bg-pink-700/10 rounded-full px-2 py-1">
             <Image
@@ -37,11 +39,15 @@ export default function Interactions({
               width={iconSize}
               height={iconSize}
             />
-            <span className={`${textSize}`}>{commentCount}</span>
+            <span data-testid="comment-count" className={`${textSize}`}>
+              {commentCount}
+            </span>
           </div>
           {viewCount ? (
             <div className="flex gap-2 items-center px-2 py-1">
-              <span className="pt-1">{viewCount} Views</span>
+              <span data-testid="view-count" className="pt-1">
+                {viewCount} Views
+              </span>
             </div>
           ) : null}
         </div>
