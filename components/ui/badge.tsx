@@ -10,7 +10,7 @@ const badgeVariants = cva(
       variant: {
         default: 'border-transparent bg-primary text-primary-foreground hover:bg-primary/80',
         skinType: 'border-transparent bg-pink-600/10 text-black text-xs font-normal',
-        postCategory: 'border-pink-600 bg-transparent text-pink-600 text-xs font-semibold px-4'
+        postCategory: 'bg-transparent text-xs font-semibold px-4'
       }
     },
     defaultVariants: {

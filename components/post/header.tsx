@@ -1,21 +1,32 @@
 import Image from 'next/image';
 import { Badge } from '../ui/badge';
+import type { PostType } from '@/types/post';
 
-export default function PostHeader() {
-  // const test = "test"
+type PropsType = {
+  author: PostType['user'];
+  createdAt: string;
+};
+
+export default function PostHeader({ author, createdAt }: PropsType) {
   return (
     <div className="flex gap-2.5">
-      <div className="h-9 w-9 bg-black rounded-full overflow-hidden">
-        <Image src="/images/picky.webp" width={500} height={500} alt="Picture of the author" />
+      <div className="h-9 w-9 bg-black rounded-full overflow-hidden relative">
+        <Image
+          src={author.image_url}
+          className="object-cover h-14"
+          alt="Picture of the author"
+          height={100}
+          width={100}
+        />
       </div>
       <div className="flex flex-col justify-center font-sans">
         <div className="flex items-center gap-2">
-          <div className="font-bold leading-4">Picky</div>
+          <div className="font-bold leading-4">{author.nick_name}</div>
           <div>
-            <Badge variant="skinType">Oily/Resilient</Badge>
+            <Badge variant="skinType">{author.skin_type}</Badge>
           </div>
         </div>
-        <div className="text-xs text-black/50">2 days ago</div>
+        <div className="text-xs text-black/50">{createdAt}</div>
       </div>
     </div>
   );
