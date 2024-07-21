@@ -1,7 +1,7 @@
 import { PostType } from '@/types/post';
 import Content from './content';
 import Footer from './footer';
-import Header from './header';
+import UserInfos from '../userInfos';
 import Link from 'next/link';
 
 type PropsType = {
@@ -13,8 +13,8 @@ export default function Post({ post, fullPost }: PropsType) {
   return (
     <Link href={`/post/${post.id}`}>
       <div
-        className={`flex flex-col gap-4 cursor-pointer transition-all duration-300 p-4 rounded-2xl ${!fullPost ? 'hover:bg-black/5' : ''}`}>
-        <Header author={post.user} createdAt={post.createdAt} />
+        className={`flex flex-col gap-4 cursor-pointer ${!fullPost ? 'transition-all duration-300 p-4 rounded-2xl hover:bg-gray-100' : ''}`}>
+        <UserInfos author={post.user} createdAt={post.createdAt} />
         <Content
           title={post.title}
           content={post.content}

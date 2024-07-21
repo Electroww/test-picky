@@ -69,4 +69,7 @@
   h1 {
     @apply text-xl font-bold font-sans;
   }
+  h2 {
+    @apply text-lg font-bold font-sans;
+  }
 }
