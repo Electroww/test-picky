@@ -1,6 +1,6 @@
 import { PostType } from '@/types/post';
 import Content from './content';
-import Footer from './footer';
+import Interactions from '../interactions';
 import UserInfos from '../userInfos';
 import Link from 'next/link';
 
@@ -22,10 +22,12 @@ export default function Post({ post, fullPost }: PropsType) {
           category={post.category}
           fullContent={fullPost}
         />
-        <Footer
+        <Interactions
+          variant="post"
           viewCount={post.viewCount}
           commentCount={post.commentCount}
           upvoteCount={post.upvoteCount}
+          bookmark={true}
         />
       </div>
     </Link>

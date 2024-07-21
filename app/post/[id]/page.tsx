@@ -3,7 +3,7 @@ import PostComponent from '@/components/post/post';
 import Comments from '@/components/comment/comments';
 import { getAllComments } from '@/actions/getAllComments';
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function PostPage({ params }: { params: { id: string } }) {
   const post = await getPostById(params.id);
   const comments = await getAllComments();
   return (

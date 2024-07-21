@@ -14,13 +14,18 @@ type PropsType = {
 export default function Content({ title, content, images, category, fullContent }: PropsType) {
   return (
     <div className="flex flex-col gap-3">
-      <h1>{title}</h1>
+      <h1 data-testid="title">{title}</h1>
       <div className="flex">
-        <Badge className="border-pink-600 text-pink-600" variant="postCategory">
+        <Badge
+          data-testid="post-category"
+          className="border-pink-600 text-pink-600"
+          variant="postCategory">
           {category.label}
         </Badge>
       </div>
-      <div className={!fullContent ? 'line-clamp-3 text-ellipsis' : ''}>{content}</div>
+      <div data-testid="content" className={!fullContent ? 'line-clamp-3 text-ellipsis' : ''}>
+        {content}
+      </div>
       <div>
         <Carousel opts={{ dragFree: true }}>
           <CarouselContent className="ml-0 gap-2 h-72">
