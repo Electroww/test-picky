@@ -8,9 +8,10 @@ type PropsType = {
   content: string;
   images: string[];
   category: PostType['category'];
+  fullContent?: boolean;
 };
 
-export default function Content({ title, content, images, category }: PropsType) {
+export default function Content({ title, content, images, category, fullContent }: PropsType) {
   return (
     <div className="flex flex-col gap-3">
       <h1>{title}</h1>
@@ -19,7 +20,7 @@ export default function Content({ title, content, images, category }: PropsType)
           {category.label}
         </Badge>
       </div>
-      <div className="line-clamp-3 text-ellipsis">{content}</div>
+      <div className={!fullContent ? 'line-clamp-3 text-ellipsis' : ''}>{content}</div>
       <div>
         <Carousel opts={{ dragFree: true }}>
           <CarouselContent className="ml-0 gap-2 h-72">
@@ -27,12 +28,7 @@ export default function Content({ title, content, images, category }: PropsType)
               <CarouselItem
                 key={`${image}-${index}`}
                 className="basis-72 relative overflow-hidden rounded-3xl">
-                <Image
-                  src="/images/image1.webp"
-                  alt="Picture of the author"
-                  layout="fill"
-                  objectFit="contain"
-                />
+                <Image src={image} alt="Picture of the author" fill className="object-contain" />
               </CarouselItem>
             ))}
           </CarouselContent>

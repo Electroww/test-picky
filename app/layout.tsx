@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${onest.variable}`}>
       <body>
-        <div className="mx-auto max-w-[56rem]">{children}</div>
+        <div className="mx-auto max-w-[56rem] min-h-screen p-24 ">{children}</div>
       </body>
     </html>
   );
