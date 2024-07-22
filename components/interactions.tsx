@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { Icons } from './icons';
 
 type PropsType = {
   upvoteCount: number;
@@ -15,45 +15,37 @@ export default function Interactions({
   bookmark,
   variant
 }: PropsType) {
-  const iconSize = variant === 'comment' ? 20 : 28;
+  const iconSize = variant === 'comment' ? 'w-5 h-5' : 'w-6 h-6';
   const textSize = variant === 'comment' ? 'text-sm' : 'text-base pt-1';
+  const interactionsStyle =
+    'flex gap-2 items-center cursor-pointer transition-all duration-300 text-black/50  hover:text-pink-700 hover:bg-pink-700/10 rounded-full px-2 py-1';
   return (
     <div className="flex gap-4">
       <div className="flex items-center justify-between w-full">
         <div className="flex gap-8 items-center">
-          <div className="flex gap-2 items-center cursor-pointer transition-all duration-300 hover:bg-pink-700/10 rounded-full px-2 py-1">
-            <Image
-              src="/images/icon-upvote-14-px@3x.png"
-              alt="Upvote"
-              width={iconSize}
-              height={iconSize}
-            />
+          <div className={`${interactionsStyle}`}>
+            <Icons.upvote className={`${iconSize} `} />
             <span data-testid="upvote-count" className={`${textSize}`}>
               {upvoteCount}
             </span>
           </div>
-          <div className="flex gap-2 items-center cursor-pointer transition-all duration-300 hover:bg-pink-700/10 rounded-full px-2 py-1">
-            <Image
-              src="/images/icon-comment-14-px@3x.png"
-              alt="Comment"
-              width={iconSize}
-              height={iconSize}
-            />
+          <div className={`${interactionsStyle}`}>
+            <Icons.comment className={`${iconSize}`} />
             <span data-testid="comment-count" className={`${textSize}`}>
               {commentCount}
             </span>
           </div>
           {viewCount ? (
             <div className="flex gap-2 items-center px-2 py-1">
-              <span data-testid="view-count" className="pt-1">
+              <span data-testid="view-count" className="pt-1 text-black/50">
                 {viewCount} Views
               </span>
             </div>
           ) : null}
         </div>
         {bookmark ? (
-          <div className="flex gap-2 items-center cursor-pointer transition-all duration-300 hover:bg-pink-700/10 rounded-full px-2 py-2">
-            <Image src="/images/icon-bookmark-14-px@3x.png" alt="Bookmark" width={24} height={24} />
+          <div className={`${interactionsStyle}`}>
+            <Icons.bookmark className={`h-6 w-6`} />
           </div>
         ) : null}
       </div>
